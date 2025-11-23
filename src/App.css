@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #8032a1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #f397eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #000000;
+}
+
+.app-header p {
+  color: #280b0b;
+}
+
+.main-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; /* Agar responsif */
+  justify-content: center;
+  background-color: #f397eb;
+}
+
+.add-new-book-card,
+.your-books-card {
+  background-color: #f9caea;
+  border: 1px solid #3f0137;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 5px rgba(21, 0, 0, 0.03);
+  flex: 1; /* Agar card mengisi ruang yang tersedia */
+  min-width: 350px; /* Lebar minimum untuk card */
+}
+
+.add-new-book-card h2,
+.your-books-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #57054b;
+  border-bottom: 1px solid #985a5a;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #270221;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #580202;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.add-book-button {
+  background-color: #a40e0e;
+  color: rgb(255, 255, 255);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.add-book-button:hover {
+  background-color: #c64b4b;
+}
+
+.add-new-book-card,
+.your-books-card {
+  border: 1px solid #980dc3;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  flex: 1;
+  min-width: 350px;
+  overflow-x: auto;
+}
+
+.your-books-card table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.your-books-card th,
+.your-books-card td {
+  border: 1px solid #4a023f;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.your-books-card th {
+  background-color: #dc52ec;
+  font-weight: bold;
+  color: #3a054d;
+}
+
+.your-books-card td {
+  color: #100f0f;
+  background-color: #fffdfd;
+}
+
+.your-books-card .actions button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.your-books-card .edit-button {
+  color: #420031; /* Green for edit */
+}
+
+.your-books-card .delete-button {
+  color: #dc3545; /* Red for delete */
+}
+
+/* Styling untuk wadah tombol di modal */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end; /* Memposisikan tombol di kanan */
+    gap: 10px; /* Jarak antara tombol */
+    margin-top: 20px;
+}
+
+/* Base style untuk semua tombol di modal-actions */
+.modal-actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease; /* Transisi halus saat hover */
+}
+
+/* Style untuk tombol 'Save Changes' */
+.save-button {
+    background-color: #a82121; /* Warna hijau */
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #cc443a; /* Hijau lebih gelap saat di-hover */
+}
+
+/* Style untuk tombol 'Cancel' */
+.cancel-button {
+    background-color: #940890; /* Warna abu-abu */
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #ae97b3; /* Abu-abu lebih gelap saat di-hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .add-new-book-card,
+  .your-books-card {
+    width: 90%; /* Agar card lebih lebar di layar kecil */
+    min-width: unset;
+
+  }
+}
